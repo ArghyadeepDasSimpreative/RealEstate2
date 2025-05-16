@@ -7,6 +7,7 @@ import errorHandler from '../../lib/errorHandler.js';
 export const registerUser = async (req, res) => {
   try {
     const { firstName, lastName, email, password, role, phoneNumber } = req.body;
+    console.log("first name is ", firstName)
 
     if (!firstName || !lastName || !email || !password || !role || !phoneNumber) {
       return res.status(400).json({ message: 'All required fields must be provided' });
